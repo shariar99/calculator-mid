@@ -11,7 +11,8 @@ This is a simple calculator app built using Flutter.
 
 ## Screenshots
 
-![img.png](img.png)
+![image](https://github.com/shariar99/calculator-mid/assets/90522515/b775b6fb-6f8d-4a8a-97ea-777796893071)
+
 
 ## Getting Started
 
