@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(CalculatorApp());
+  runApp(const CalculatorApp());
 }
 
 class CalculatorApp extends StatelessWidget {
+  const CalculatorApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Calculator(),
       theme: ThemeData(
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodyText1: TextStyle(
             fontFamily: 'Calf', // Use the custom font family
             fontSize: 48.0,
@@ -23,6 +25,8 @@ class CalculatorApp extends StatelessWidget {
 }
 
 class Calculator extends StatefulWidget {
+  const Calculator({super.key});
+
   @override
   _CalculatorState createState() => _CalculatorState();
 }
@@ -90,7 +94,7 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calculator'),
+        title: const Text('Calculator id 201071012'),
       ),
       body: Column(
         children: <Widget>[
@@ -98,7 +102,7 @@ class _CalculatorState extends State<Calculator> {
             flex: 1,
             child: Container(
               alignment: Alignment.bottomRight,
-              padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+              padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
               child: Text(
                 _output,
                 style: Theme.of(context).textTheme.bodyText1,
@@ -139,7 +143,7 @@ class _CalculatorState extends State<Calculator> {
             ),
             child: Text(
               buttonText,
-              style: TextStyle(fontSize: 24.0),
+              style: const TextStyle(fontSize: 24.0),
             ),
           );
         }).toList(),
