@@ -10,7 +10,7 @@ class CalculatorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Calculator(),
+      home: const Calculator(),
       theme: ThemeData(
         textTheme: const TextTheme(
           bodyText1: TextStyle(
@@ -40,6 +40,8 @@ class _CalculatorState extends State<Calculator> {
         _output = '';
       } else if (buttonText == '=') {
         _calculateResult();
+      } else if (buttonText == '%') {
+        _calculatePercentage();
       } else {
         _output += buttonText;
       }
@@ -90,6 +92,20 @@ class _CalculatorState extends State<Calculator> {
     }
   }
 
+  void _calculatePercentage() {
+    try {
+      double input = double.parse(_output);
+      double result = input / 100.0;
+      setState(() {
+        _output = result.toString();
+      });
+    } catch (e) {
+      setState(() {
+        _output = 'Error';
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,26 +119,24 @@ class _CalculatorState extends State<Calculator> {
             child: Container(
               alignment: Alignment.bottomRight,
               padding:
-                  const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+              const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
               child: Text(
                 _output,
                 style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
           ),
-          Divider(),
+          const Divider(),
           Expanded(
             flex: 2,
-            child: Container(
-              child: Column(
-                children: [
-                  _buildRow(['7', '8', '9', '/']),
-                  _buildRow(['4', '5', '6', '*']),
-                  _buildRow(['1', '2', '3', '-']),
-                  _buildRow(['0', '.', '=', '+']),
-                  _buildRow(['C'], color: Colors.red), // Clear button
-                ],
-              ),
+            child: Column(
+              children: [
+                _buildRow(['7', '8', '9', '/']),
+                _buildRow(['4', '5', '6', '*']),
+                _buildRow(['1', '2', '3', '-']),
+                _buildRow(['0', '.', '=', '+']),
+                _buildRow(['%', 'C'], color: Colors.red), // Added '%' button
+              ],
             ),
           ),
         ],
