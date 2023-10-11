@@ -102,7 +102,8 @@ class _CalculatorState extends State<Calculator> {
             flex: 1,
             child: Container(
               alignment: Alignment.bottomRight,
-              padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
               child: Text(
                 _output,
                 style: Theme.of(context).textTheme.bodyText1,
@@ -149,4 +150,5 @@ class _CalculatorState extends State<Calculator> {
         }).toList(),
       ),
     );
-  }}
+  }
+}

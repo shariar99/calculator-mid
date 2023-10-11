@@ -1,16 +1,58 @@
-# calculator
+# Flutter Calculator App
 
-A new Flutter project.
+This is a simple calculator app built using Flutter.
+
+## Features
+
+- Addition, subtraction, multiplication, and division operations.
+- Modulo (%) operation.
+- Clear button to reset the calculation.
+- Custom font for the display.
+
+## Screenshots
+
+![img.png](img.png)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Make sure you have Flutter installed on your machine.
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone this repository:
+   ```bash
+        git clone https://github.com/your-username/flutter-calculator.git```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  **Navigate to the project directory:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    ```bash
+    cd flutter-calculator
+    ```
+
+   **Install dependencies:**
+
+    ```bash
+    flutter pub get
+    ```
+
+   **Run the app:**
+
+    ```bash
+    flutter run
+    ```
+This markdown code provides clear instructions for navigating to the project directory, installing dependencies, and running the app.
+
+
+
+
+
+
+
+
+# Contributing
+If you'd like to contribute to this project, please follow these guidelines:
+
+Fork the repository and create your branch from main.
+Open an issue to discuss the proposed changes.
+Submit a pull request with your changes and a detailed description.
+
+#  License
+This project is licensed under the MIT License.
